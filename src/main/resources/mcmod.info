@@ -1,0 +1,13 @@
+[
+{
+  "modid": "sanctionmode",
+  "name": "Sanction Mode",
+  "description": "Game mode 4: creative flight and invulnerability, survival block breaking, creative item taking only after an operator approval.",
+  "version": "1.0.0",
+  "url": "https://github.com/kimarsen/sanction-mode",
+  "mcversion": "1.12.2",
+  "authorList": [],
+  "credits": "",
+  "dependencies": ["forge@[14.23.5.2847,)"]
+}
+]

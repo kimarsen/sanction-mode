@@ -1,0 +1,39 @@
+plugins {
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.4.9'
+}
+
+group = 'com.sanctionmode'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+minecraft {
+    mcVersion = '1.12.2'
+    mcpMappingChannel = 'stable'
+    mcpMappingVersion = '39'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+}
+
+jar {
+    from('src/main/resources/assets/sanctionmode/lang/ru_ru.lang') {
+        into('assets/sanctionmode/lang')
+        rename { 'ru_RU.lang' }
+    }
+    from('src/main/resources/assets/sanctionmode/lang/en_us.lang') {
+        into('assets/sanctionmode/lang')
+        rename { 'en_US.lang' }
+    }
+}
